@@ -5,11 +5,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My To Do List</title>
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+      integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
     <link rel="stylesheet" href="./public/css/style.css" />
   </head>
   <body>
-    <header></header>
-    <main></main>
+    <header id="main-header" class="bg-success text-white p-5 mb-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 bg-white text-dark mx-auto text-center">
+            <h1 id="header-title">My To Do List</h1>
+          </div>
+          <!-- <div class="col-md-6 align-self-center">
+            <input
+              type="text"
+              class="form-control"
+              id="filter"
+              placeholder="Search Items..."
+            />
+          </div> -->
+        </div>
+      </div>
+    </header>
+    <main class="container">
+      <div id="main" class="card card-body">
+        <!-- <h2 class="title">Add Items</h2> -->
+        <div class="mx-auto my-3">
+          <form id="addForm" class="form-inline mb-3">
+            <input
+              type="text"
+              class="form-control mr-2"
+              id="addItem"
+              placeholder="Search or Add Items..."
+            />
+            <input type="submit" class="btn btn-dark" value="Add New Item" />
+          </form>
+        </div>
+        <h2 class="title">Items</h2>
+        <ul id="items" class="list-group">
+          <li class="list-group-item">
+            <i class="far fa-square" style="font-size: 2rem"></i>
+
+            Item 1
+            <i class="fas fa-pencil-alt"></i>
+            <button class="btn btn-danger btn-sm float-right delete">X</button>
+          </li>
+          <li class="list-group-item">
+            <i class="far fa-check-square" style="font-size: 2rem"></i>
+            Item 2
+            <div>
+              <button class="btn btn-danger btn-sm">
+                <i class="fas fa-pencil-alt" style="font-size: 1.2rem"></i>
+              </button>
+            </div>
+            <button class="btn btn-danger btn-sm float-right delete">X</button>
+          </li>
+        </ul>
+      </div>
+    </main>
     <footer></footer>
     <script src="./src/init/index.js"></script>
   </body>
