@@ -22,23 +22,14 @@
     <header id="main-header" class="bg-success text-white p-5 mb-5">
       <div class="container">
         <div class="row">
-          <div class="col-md-6 bg-white text-dark mx-auto text-center">
+          <div class="col-md-6 mx-auto text-center">
             <h1 id="header-title">My To Do List</h1>
           </div>
-          <!-- <div class="col-md-6 align-self-center">
-            <input
-              type="text"
-              class="form-control"
-              id="filter"
-              placeholder="Search Items..."
-            />
-          </div> -->
         </div>
       </div>
     </header>
     <main class="container">
       <div id="main" class="card card-body">
-        <!-- <h2 class="title">Add Items</h2> -->
         <div class="mx-auto my-3">
           <form id="addForm" class="form-inline mb-3">
             <input
@@ -47,27 +38,44 @@
               id="addItem"
               placeholder="Search or Add Items..."
             />
-            <input type="submit" class="btn btn-dark" value="Add New Item" />
+            <input type="submit" class="btn btn-primary" value="Add New Item" />
           </form>
         </div>
-        <h2 class="title">Items</h2>
+
         <ul id="items" class="list-group">
           <li class="list-group-item">
-            <i class="far fa-square" style="font-size: 2rem"></i>
+            <i
+              class="far fa-square align-middle mr-3"
+              style="font-size: 2rem"
+            ></i>
 
             Item 1
-            <i class="fas fa-pencil-alt"></i>
-            <button class="btn btn-danger btn-sm float-right delete">X</button>
-          </li>
-          <li class="list-group-item">
-            <i class="far fa-check-square" style="font-size: 2rem"></i>
-            Item 2
-            <div>
-              <button class="btn btn-danger btn-sm">
+            <div class="float-right align-middle">
+              <button class="btn btn-sm btn-outline-primary no-border mr-1">
                 <i class="fas fa-pencil-alt" style="font-size: 1.2rem"></i>
               </button>
+
+              <button class="btn btn-outline-danger btn-sm delete no-border">
+                X
+              </button>
             </div>
-            <button class="btn btn-danger btn-sm float-right delete">X</button>
+          </li>
+          <li class="list-group-item align-middle">
+            <i
+              class="far fa-check-square align-middle mr-3 btn-outline-success"
+              style="font-size: 2rem"
+            ></i>
+            <span><del>Item 2</del></span>
+
+            <div class="float-right align-middle">
+              <button class="btn btn-sm btn-outline-primary no-border mr-1">
+                <i class="fas fa-pencil-alt" style="font-size: 1.2rem"></i>
+              </button>
+
+              <button class="btn btn-outline-danger btn-sm delete no-border">
+                X
+              </button>
+            </div>
           </li>
         </ul>
       </div>
