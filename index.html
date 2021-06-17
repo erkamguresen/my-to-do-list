@@ -42,7 +42,7 @@
           </form>
         </div>
 
-        <ul id="items" class="list-group">
+        <ul id="item-list" class="list-group">
           <li class="list-group-item">
             <i
               class="far fa-square align-middle mr-3 check"
@@ -58,7 +58,7 @@
               </button>
 
               <button class="btn btn-outline-danger btn-sm delete no-border">
-                X
+                <i class="fas fa-trash-alt"></i>
               </button>
             </div>
           </li>
@@ -74,7 +74,7 @@
               "
               style="font-size: 2rem"
             ></i>
-            <span><del>Item 2</del></span>
+            <span contenteditable="true"><del>Item 2</del></span>
 
             <div class="float-right align-middle">
               <button
@@ -84,7 +84,33 @@
               </button>
 
               <button class="btn btn-outline-danger btn-sm delete no-border">
-                X
+                <i class="fas fa-trash-alt"></i>
+              </button>
+            </div>
+          </li>
+          <li class="list-group-item align-middle">
+            <i
+              class="
+                far
+                fa-check-square
+                align-middle
+                mr-3
+                btn-outline-success
+                check
+              "
+              style="font-size: 2rem"
+            ></i>
+            <span contenteditable="true"><del>Item 3</del></span>
+
+            <div class="float-right align-middle">
+              <button
+                class="btn btn-sm btn-outline-primary no-border mr-1 edit"
+              >
+                <i class="fas fa-pencil-alt edit" style="font-size: 1.2rem"></i>
+              </button>
+
+              <button class="btn btn-outline-danger btn-sm delete no-border">
+                <i class="fas fa-trash-alt"></i>
               </button>
             </div>
           </li>
