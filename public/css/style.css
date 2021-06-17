@@ -12,3 +12,7 @@ span[contenteditable='true'] {
   padding: 5px;
   border-radius: 5px;
 }
+
+.fa-check-square + span {
+  text-decoration: line-through;
+}
