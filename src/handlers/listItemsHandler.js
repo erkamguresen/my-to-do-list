@@ -6,8 +6,7 @@ import { filterItems } from '../procedures/filterList.js';
 
 export function listItemsHandler(event) {
   event.preventDefault();
-  // console.log('listItemsHandler');
-  // console.log(event.type);
+
   if (event.target.classList.contains('delete')) {
     deleteItem(event);
   }
