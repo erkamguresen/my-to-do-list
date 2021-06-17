@@ -44,7 +44,5 @@ export function createNewLIItem(newItemValue) {
 
   resetFilter();
 
-  sortList();
-
   return newLi;
 }

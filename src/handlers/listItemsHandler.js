@@ -3,6 +3,7 @@ import { checkItem } from '../procedures/checkItem.js';
 import { deleteItem } from '../procedures/deleteItem.js';
 import { editItem } from '../procedures/editItem.js';
 import { filterItems } from '../procedures/filterList.js';
+import { sortList } from '../procedures/sortList.js';
 
 export function listItemsHandler(event) {
   event.preventDefault();
@@ -35,6 +36,8 @@ export function addItemHandler(event) {
 
     //delete the text from the formatting
     newItem.value = '';
+
+    sortList();
   }
 }
 

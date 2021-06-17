@@ -18,10 +18,21 @@ export function sortList() {
   //     }
   //   });
 
-  console.log(liArray);
+  itemList.innerHTML = [];
+
+  liArray.forEach((element) => {
+    itemList.appendChild(element);
+  });
 }
 
 function sortFunctionCheckedFirst(a, b) {
+  return (
+    b.querySelector('i').classList.contains('fa-square') -
+    a.querySelector('i').classList.contains('fa-square')
+  );
+}
+
+function sortFunctionUncCeckedFirst(a, b) {
   return (
     a.querySelector('i').classList.contains('fa-square') -
     b.querySelector('i').classList.contains('fa-square')
