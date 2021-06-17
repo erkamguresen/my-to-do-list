@@ -1,9 +1,8 @@
 import { getLIItem } from '../logic/getLiItem.js';
 
 export function deleteItem(event) {
-  //TODO: delete item function
-  const liElement = getLIItem(event);
+  const itemList = document.getElementById('item-list');
 
-  console.log('delete function');
-  console.log(liElement);
+  const liElement = getLIItem(event);
+  itemList.removeChild(liElement);
 }
