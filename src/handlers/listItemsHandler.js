@@ -8,14 +8,22 @@ import { sortList } from '../procedures/sortList.js';
 export function listItemsHandler(event) {
   event.preventDefault();
 
-  if (event.target.classList.contains('delete')) {
-    deleteItem(event);
-  }
-  if (event.target.classList.contains('edit')) {
-    editItem(event);
-  }
-  if (event.target.classList.contains('check')) {
-    checkItem(event);
+  switch (event.type) {
+    case 'click':
+      if (event.target.classList.contains('delete')) {
+        deleteItem(event);
+      } else if (event.target.classList.contains('edit')) {
+        editItem(event);
+      } else if (event.target.classList.contains('check')) {
+        checkItem(event);
+      }
+      break;
+
+    case 'dblclick':
+      if (event.target.nodeName === 'SPAN') {
+        editItem(event);
+      }
+      break;
   }
 }
 

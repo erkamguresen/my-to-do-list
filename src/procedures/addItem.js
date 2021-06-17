@@ -1,5 +1,4 @@
 import { resetFilter } from './filterList.js';
-import { sortList } from './sortList.js';
 
 export function createNewLIItem(newItemValue) {
   const newLi = document.createElement('li');

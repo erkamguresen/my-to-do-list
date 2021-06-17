@@ -7,4 +7,8 @@ document
 
 document
   .getElementById('item-list')
+  .addEventListener('dblclick', listItemsHandler);
+
+document
+  .getElementById('item-list')
   .addEventListener('focusout', editFocusOutHandler);
