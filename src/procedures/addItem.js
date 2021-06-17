@@ -1,4 +1,5 @@
 import { resetFilter } from './filterList.js';
+import { sortList } from './sortList.js';
 
 export function createNewLIItem(newItemValue) {
   const newLi = document.createElement('li');
@@ -42,6 +43,8 @@ export function createNewLIItem(newItemValue) {
   newLi.appendChild(newButtonDiv);
 
   resetFilter();
+
+  sortList();
 
   return newLi;
 }

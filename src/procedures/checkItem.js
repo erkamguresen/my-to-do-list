@@ -1,4 +1,5 @@
 import { getLIItem } from '../logic/getLiItem.js';
+import { sortList } from './sortList.js';
 
 export function checkItem(event) {
   const liElement = getLIItem(event);
@@ -19,4 +20,6 @@ export function checkItem(event) {
     classList.remove('fa-check-square');
     classList.add('fa-square');
   }
+
+  sortList();
 }
