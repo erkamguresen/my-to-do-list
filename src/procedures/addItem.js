@@ -12,6 +12,7 @@ export function createNewLIItem(newItemValue) {
   newLi.appendChild(newCheckIcon);
 
   const newSpan = document.createElement('span');
+  newSpan.contentEditable = false;
   newSpan.textContent = newItemValue;
   newLi.appendChild(newSpan);
 
