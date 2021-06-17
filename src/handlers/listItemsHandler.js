@@ -1,4 +1,5 @@
 import { createNewLIItem } from '../procedures/addItem.js';
+import { filterItems } from '../procedures/filterList.js';
 
 export function listItemsHandler(event) {
   event.preventDefault();
@@ -26,38 +27,10 @@ export function addItemHandler(event) {
   //get text value
   let newItemValue = newItem.value;
 
-  //TODO implement the method
-  let newLi = createNewLIItem(newItemValue);
+  if (newItemValue !== '') {
+    let newLi = createNewLIItem(newItemValue);
 
-  let itemList = document.getElementById('item-list');
-
-  itemList.appendChild(newLi);
-
-  //delete the text from the formatting
-  newItem.value = '';
-
-  console.log('addItemHandler');
-  console.log(event.type);
-
-  function addItem(e) {
-    e.preventDefault();
-
-    //Create new li Element
-    let newLi = document.createElement('li');
-
-    //Add Class to Li
-    newLi.className = 'list-group-item';
-
-    //Add text node with input value
-    newLi.appendChild(document.createTextNode(newItemValue));
-
-    //create delete Button
-    let deleteButton = document.createElement('button');
-
-    deleteButton.className = 'btn btn-danger btn-sm float-right delete';
-    deleteButton.textContent = 'X';
-
-    newLi.appendChild(deleteButton);
+    let itemList = document.getElementById('item-list');
 
     itemList.appendChild(newLi);
 
@@ -71,4 +44,5 @@ export function filterItemsHandler(event) {
   console.log('filterItemsHandler');
   console.log(event.type);
   console.log(event.target.value);
+  filterItems(event);
 }

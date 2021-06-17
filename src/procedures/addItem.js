@@ -1,3 +1,5 @@
+import { resetFilter } from './filterList.js';
+
 export function createNewLIItem(newItemValue) {
   const newLi = document.createElement('li');
   newLi.className = 'list-group-item';
@@ -8,7 +10,9 @@ export function createNewLIItem(newItemValue) {
 
   newLi.appendChild(newCheckIcon);
 
-  newLi.appendChild(document.createTextNode(newItemValue));
+  const newSpan = document.createElement('span');
+  newSpan.textContent = newItemValue;
+  newLi.appendChild(newSpan);
 
   const newButtonDiv = document.createElement('div');
   newButtonDiv.className = 'float-right align-middle';
@@ -34,6 +38,8 @@ export function createNewLIItem(newItemValue) {
   newButtonDiv.appendChild(newDeleteButton);
 
   newLi.appendChild(newButtonDiv);
+
+  resetFilter();
 
   return newLi;
 }
