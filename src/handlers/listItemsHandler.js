@@ -1,21 +1,21 @@
 import { createNewLIItem } from '../procedures/addItem.js';
+import { checkItem } from '../procedures/checkItem.js';
+import { deleteItem } from '../procedures/deleteItem.js';
+import { editItem } from '../procedures/editItem.js';
 import { filterItems } from '../procedures/filterList.js';
 
 export function listItemsHandler(event) {
   event.preventDefault();
-  console.log('listItemsHandler');
-  console.log(event.type);
+  // console.log('listItemsHandler');
+  // console.log(event.type);
   if (event.target.classList.contains('delete')) {
-    console.log('delete');
-    console.log(event.currentTarget);
+    deleteItem(event);
   }
   if (event.target.classList.contains('edit')) {
-    console.log('edit');
-    console.log(event.currentTarget);
+    editItem(event);
   }
   if (event.target.classList.contains('check')) {
-    console.log('check');
-    console.log(event.currentTarget);
+    checkItem(event);
   }
 }
 

@@ -34,7 +34,7 @@ export function createNewLIItem(newItemValue) {
   newDeleteButton.className = 'btn btn-outline-danger btn-sm delete no-border';
 
   const newDeleteIcon = document.createElement('i');
-  newDeleteIcon.className = 'fas fa-trash-alt';
+  newDeleteIcon.className = 'fas fa-trash-alt delete';
   newDeleteButton.appendChild(newDeleteIcon);
   newButtonDiv.appendChild(newDeleteButton);
 
