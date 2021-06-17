@@ -5,7 +5,8 @@ export function createNewLIItem(newItemValue) {
   newLi.className = 'list-group-item';
 
   const newCheckIcon = document.createElement('i');
-  newCheckIcon.className = 'far fa-square align-middle mr-3 check';
+  newCheckIcon.className =
+    'far fa-square align-middle mr-3 check btn-outline-success';
   newCheckIcon.style.fontSize = '2rem';
 
   newLi.appendChild(newCheckIcon);

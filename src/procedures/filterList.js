@@ -9,7 +9,6 @@ export function filterItems(event) {
   //convert to an array
   Array.from(items).forEach((item) => {
     const itemName = item.querySelector('span').textContent;
-    console.log(itemName);
 
     //If the searched text is not in the array it will return -1
     if (itemName.toLocaleLowerCase().indexOf(searchText) === -1) {

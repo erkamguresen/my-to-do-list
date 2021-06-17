@@ -41,8 +41,6 @@ export function addItemHandler(event) {
 
 export function filterItemsHandler(event) {
   event.preventDefault();
-  console.log('filterItemsHandler');
-  console.log(event.type);
-  console.log(event.target.value);
+
   filterItems(event);
 }
