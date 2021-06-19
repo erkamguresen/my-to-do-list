@@ -10,6 +10,8 @@ export function editItem(event) {
   isEditable = !isEditable;
 
   spanElement.setAttribute('contentEditable', isEditable);
+
+  spanElement.focus();
 }
 
 export function disableEditing(event) {
