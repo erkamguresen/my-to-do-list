@@ -13,5 +13,5 @@ export const myToDoListDataBase = {
 
 export const currentData = {
   currentToDoListName: '',
-  currentToDoList: [],
+  currentToDoList: ['o', 'bu', 'su', 'etc'],
 };

@@ -1,4 +1,4 @@
-import { createLiElement } from './liElement';
+import { createLiElement } from './liElement.js';
 
 export function createUlElement(listArray) {
   const ulElement = document.createElement('ul');
