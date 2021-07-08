@@ -1,8 +1,10 @@
+import { currentData } from '../data/data.js';
 import { createNewLIItem } from '../procedures/addItem.js';
 import { checkItem } from '../procedures/checkItem.js';
 import { deleteItem } from '../procedures/deleteItem.js';
 import { editItem } from '../procedures/editItem.js';
 import { filterItems } from '../procedures/filterList.js';
+import { renderToDoList } from '../procedures/renderList.js';
 import { sortList } from '../procedures/sortList.js';
 
 export function listItemsHandler(event) {
@@ -35,18 +37,22 @@ export function addItemHandler(event) {
   //get text value
   let newItemValue = newItem.value;
 
-  if (newItemValue !== '') {
-    let newLi = createNewLIItem(newItemValue);
+  // if (newItemValue !== '') {
+  //   let newLi = createNewLIItem(newItemValue);
 
-    let itemList = document.getElementById('item-list');
+  //   let itemList = document.getElementById('item-list');
 
-    itemList.appendChild(newLi);
+  //   itemList.appendChild(newLi);
 
-    //delete the text from the formatting
-    newItem.value = '';
+  //   //delete the text from the formatting
+  //   newItem.value = '';
 
-    sortList();
-  }
+  //   sortList();
+  // }
+
+  currentData.currentToDoList.push(newItemValue);
+
+  renderToDoList();
 }
 
 export function filterItemsHandler(event) {
