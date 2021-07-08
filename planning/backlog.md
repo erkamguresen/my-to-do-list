@@ -1,0 +1,8 @@
+- [ ] As a user I can add new items to the list
+- [ ] As a user I can delete items from the list
+- [ ] As a user I can edit the items on the list
+- [ ] As a user I can check when the item/task is finished
+- [ ] As a user I want to see the unchecked / unfinished items/task first and then the checked/finished items
+- [ ] As a user when edit the task in the list i want mouse curser gone to the text field
+- [ ]
+- [ ] As a user I want my data to stored locally and loads my list when I reopen the list
