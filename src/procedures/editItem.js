@@ -15,7 +15,7 @@ export function editItem(event) {
 }
 
 export function disableEditing(event) {
-  let targetElement = event.target;
+  const targetElement = event.target;
 
   while (targetElement.nodeName !== 'SPAN') {
     targetElement = targetElement.parentElement;
