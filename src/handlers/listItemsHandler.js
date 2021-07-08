@@ -37,19 +37,6 @@ export function addItemHandler(event) {
   //get text value
   let newItemValue = newItem.value;
 
-  // if (newItemValue !== '') {
-  //   let newLi = createNewLIItem(newItemValue);
-
-  //   let itemList = document.getElementById('item-list');
-
-  //   itemList.appendChild(newLi);
-
-  //   //delete the text from the formatting
-  //   newItem.value = '';
-
-  //   sortList();
-  // }
-
   currentData.currentToDoList.push(newItemValue);
 
   renderToDoList();

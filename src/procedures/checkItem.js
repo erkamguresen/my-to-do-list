@@ -2,6 +2,9 @@ import { getLIItem } from '../logic/getLiItem.js';
 import { sortList } from './sortList.js';
 
 export function checkItem(event) {
+  //TODO: data schema
+  //TODO: data with checked property
+  //TODO: render wrt checked property
   const liElement = getLIItem(event);
 
   const checkBox = liElement.querySelector('.check');
