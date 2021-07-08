@@ -41,6 +41,7 @@ export function createNewLIItem(newItemValue) {
 
   newLi.appendChild(newButtonDiv);
 
+  //TODO: reset filter in new refactored code
   resetFilter();
 
   return newLi;
