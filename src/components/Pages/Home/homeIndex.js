@@ -7,7 +7,9 @@ import { createFormPanel } from '../../shared/formPanel.js';
 
 //setup the state object
 state.currentToDoListIndex = -1;
-state.toDoLists = [] || getDataSet().toDoLists;
+if (getDataSet() !== null) {
+  state.toDoLists = getDataSet().toDoLists;
+}
 
 // the add and search form part
 const mainPanel = document.getElementById('main-panel');
