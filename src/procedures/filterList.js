@@ -1,7 +1,7 @@
 export function filterItems(event) {
   //get the search text and convert to lowercase
   let searchText = event.target.value.toLocaleLowerCase();
-
+  debugger;
   const itemList = document.getElementById('list-container');
 
   const items = itemList.getElementsByTagName('li');

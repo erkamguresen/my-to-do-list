@@ -1,4 +1,4 @@
-export function createSpan(classes = '', textForSpan) {
+export function createSpanElement(classes = '', textForSpan) {
   const newSpan = document.createElement('span');
   newSpan.className = classes;
   newSpan.contentEditable = false;

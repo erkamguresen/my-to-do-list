@@ -3,8 +3,6 @@ import { createDivElement } from '../components/shared/divElement.js';
 import { state } from '../data/data.js';
 
 export function renderTheListOfLists() {
-  // TODO:
-
   const mainPanel = document.getElementById('main-panel');
   let listContainer = document.getElementById('list-container');
 
