@@ -5,10 +5,11 @@ import { getMyToDoListDataSet } from '../IO/IO-LocalStorage.js';
 
 /**
  * This is for all ToDo lists. It gets from local storage
- * or creates a new empty one
+ * named MyToDoListDataSet
  */
 const toDoListData = {
   toDoLists: [],
+  currentToDoListIndex: -1,
 };
 
 const toDoListExampleData = {
