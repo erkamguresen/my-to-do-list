@@ -7,5 +7,4 @@ export function filterListsHandler(event) {
   console.log(event);
 
   filterItems(event);
-  //TODO: handle
 }
