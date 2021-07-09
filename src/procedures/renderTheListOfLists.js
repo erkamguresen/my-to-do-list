@@ -30,7 +30,6 @@ export function renderTheListOfLists() {
     const list = lists[index];
     const listItemElement = createListItemElement(list);
 
-    console.log(list);
     ulElement.appendChild(listItemElement);
   }
 }

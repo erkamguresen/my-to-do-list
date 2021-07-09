@@ -1,4 +1,6 @@
 import { createNewList } from '../init/newList.js';
+import { saveDataSet } from '../IO/IO-LocalStorage.js';
+import { renderTheListOfLists } from '../procedures/renderTheListOfLists.js';
 
 export function addNewListHandler(event) {
   event.preventDefault();
@@ -13,6 +15,9 @@ export function addNewListHandler(event) {
   // create the new list
   createNewList(newListName);
 
-  //TODO:render list
-  console.log(newListName);
+  //save the state
+  saveDataSet();
+
+  //render list
+  renderTheListOfLists();
 }

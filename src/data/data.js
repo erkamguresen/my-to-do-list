@@ -1,8 +1,6 @@
 //TODO drag drop
 // https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sort_list
 
-import { getMyToDoListDataSet } from '../IO/IO-LocalStorage.js';
-
 /**
  * This is for all ToDo lists. It gets from local storage
  * named MyToDoListDataSet
