@@ -6,6 +6,11 @@ export const toDoListDataSchema = {
   required: ['toDoLists'],
 
   properties: {
+    currentToDoListIndex: {
+      type: 'integer',
+      description:
+        'the current to do list index, if nothing is selected then -1',
+    },
     toDoLists: {
       type: 'array',
       description: 'array of to do list data containing different to do lists',
@@ -14,12 +19,17 @@ export const toDoListDataSchema = {
         type: 'object',
         description: 'data belonging to a single to do list',
 
-        required: ['listId', 'toDos'],
+        required: ['listId', 'toDos', 'listName'],
 
         properties: {
           listId: {
             type: 'number',
             description: 'an unique number for each to do list',
+          },
+
+          listName: {
+            type: 'string',
+            description: 'the name of the to do list',
           },
 
           toDos: {

@@ -16,6 +16,7 @@ const toDoListExampleData = {
   toDoLists: [
     // list 1
     {
+      listName: 'Must To Do List',
       listId: 1625764536952,
       toDos: [
         // list item 1
@@ -38,6 +39,7 @@ const toDoListExampleData = {
     },
     // list 2
     {
+      listName: 'a single to do list',
       listId: 1625764551531,
       toDos: [
         {
@@ -59,6 +61,7 @@ const toDoListExampleData = {
     },
 
     {
+      listName: 'My shopping List',
       listId: 1625764551533,
       toDos: [
         {

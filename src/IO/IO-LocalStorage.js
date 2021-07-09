@@ -1,5 +1,13 @@
 //Name of the main save in the local storage system
-const localStorageMainSave = 'My List DataBase';
+const localStorageMainSave = 'MyToDoListDataSet';
+
+export function getDataSet() {
+  return JSON.parse(localStorage.getItem(localStorageMainSave));
+}
+
+/*
+After this part is not used yet
+*/
 
 // Name format for each data set in the local storage system:
 // `${listName} Data`
@@ -12,9 +20,9 @@ export function saveDataSet(noteList) {
   updateDataSetList(`${noteList.listName} Data`);
 }
 
-export function getDataSet(listName) {
-  return JSON.parse(localStorage.getItem(listName));
-}
+// export function getDataSet(listName) {
+//   return JSON.parse(localStorage.getItem(listName));
+// }
 
 export function getMyToDoListDataSet() {
   const dataList = [];
