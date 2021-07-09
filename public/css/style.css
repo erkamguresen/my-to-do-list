@@ -16,3 +16,7 @@ span[contenteditable='true'] {
 .fa-check-square + span {
   text-decoration: line-through;
 }
+
+.list-group-item:hover {
+  background-color: aliceblue;
+}

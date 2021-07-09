@@ -2,6 +2,7 @@ import { createDivElement } from './divElement.js';
 
 export function createFormPanel() {
   const newDiv = createDivElement('mx-auto my-3');
+  newDiv.id = 'form-container';
 
   //create form element
   const newForm = document.createElement('form');
