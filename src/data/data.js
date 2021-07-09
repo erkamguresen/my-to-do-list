@@ -8,6 +8,10 @@ import { getMyToDoListDataSet } from '../IO/IO-LocalStorage.js';
  * or creates a new empty one
  */
 const toDoListData = {
+  toDoLists: [],
+};
+
+const toDoListExampleData = {
   toDoLists: [
     // list 1
     {
@@ -76,4 +80,4 @@ const toDoListData = {
   ],
 };
 
-export { toDoListData as state };
+export { toDoListData as state, toDoListExampleData as exampleData };
