@@ -1,10 +1,8 @@
 import { createFormPanel } from '../components/shared/formPanel.js';
 import { state } from '../data/data.js';
-import { editFocusOutHandler } from '../handlers/editFocusOutHandler.js';
 import {
   addItemHandler,
   filterItemsHandler,
-  listItemsHandler,
 } from '../handlers/listItemsHandler.js';
 import { renderToDoList } from './renderList.js';
 
@@ -37,17 +35,4 @@ export function opeTheList(listID) {
 
   // render the list
   renderToDoList(listID);
-
-  // add listeners to the list
-  document
-    .getElementById('list-container')
-    .addEventListener('click', listItemsHandler);
-
-  document
-    .getElementById('list-container')
-    .addEventListener('dblclick', listItemsHandler);
-
-  document
-    .getElementById('list-container')
-    .addEventListener('focusout', editFocusOutHandler);
 }

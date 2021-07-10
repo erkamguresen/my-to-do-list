@@ -1,6 +1,8 @@
 import { createLiItem } from '../components/Pages/toDoList/listItem.js';
 import { createDivElement } from '../components/shared/divElement.js';
 import { state } from '../data/data.js';
+import { editFocusOutHandler } from '../handlers/editFocusOutHandler.js';
+import { listItemsHandler } from '../handlers/listItemsHandler.js';
 import { sortList } from './sortList.js';
 
 /**
@@ -50,4 +52,11 @@ export function renderToDoList(listID) {
     //sort the list
     sortList();
   }
+
+  // add listeners to the list
+  listContainer.addEventListener('click', listItemsHandler);
+
+  listContainer.addEventListener('dblclick', listItemsHandler);
+
+  listContainer.addEventListener('focusout', editFocusOutHandler);
 }
