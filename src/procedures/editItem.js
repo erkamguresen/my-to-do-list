@@ -1,5 +1,8 @@
 import { state } from '../data/data.js';
+import { saveDataSet } from '../IO/IO-LocalStorage.js';
 import { getLIItem } from '../logic/getLiItem.js';
+import { renderToDoList } from './renderList.js';
+import { sortList } from './sortList.js';
 
 export function editItem(event) {
   const liElement = getLIItem(event);
