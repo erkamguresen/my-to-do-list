@@ -3,6 +3,12 @@ import { createDivElement } from '../components/shared/divElement.js';
 import { state } from '../data/data.js';
 import { sortList } from './sortList.js';
 
+/**
+ * This function gets the id of the list to be rendered.
+ * And renders it in the application.
+ *
+ * @param {string} listID - ID of the list to be rendered.
+ */
 export function renderToDoList(listID) {
   const mainPanel = document.getElementById('main-panel');
 

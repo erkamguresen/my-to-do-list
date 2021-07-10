@@ -19,13 +19,13 @@ export function filterItems(event) {
   });
 }
 
-export function resetFilter() {
-  const itemList = document.getElementById('item-list');
+// export function resetFilter() {
+//   const itemList = document.getElementById('item-list');
 
-  const items = itemList.getElementsByTagName('li');
+//   const items = itemList.getElementsByTagName('li');
 
-  //convert to an array
-  Array.from(items).forEach((item) => {
-    item.style.display = 'block';
-  });
-}
+//   //convert to an array
+//   Array.from(items).forEach((item) => {
+//     item.style.display = 'block';
+//   });
+// }

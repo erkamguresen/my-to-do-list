@@ -3,6 +3,8 @@ import { getLIItem } from '../logic/getLiItem.js';
 export function editItem(event) {
   const liElement = getLIItem(event);
 
+  console.log('edit enabled');
+
   const spanElement = liElement.querySelector('span');
 
   let isEditable = spanElement.getAttribute('contentEditable') === 'true';
@@ -17,6 +19,7 @@ export function editItem(event) {
 export function disableEditing(event) {
   const targetElement = event.target;
 
+  console.log('edit disabled');
   while (targetElement.nodeName !== 'SPAN') {
     targetElement = targetElement.parentElement;
   }

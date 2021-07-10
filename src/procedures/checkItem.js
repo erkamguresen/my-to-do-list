@@ -1,28 +1,33 @@
+import { state } from '../data/data.js';
+import { saveDataSet } from '../IO/IO-LocalStorage.js';
 import { getLIItem } from '../logic/getLiItem.js';
+import { renderToDoList } from './renderList.js';
 import { sortList } from './sortList.js';
 
 export function checkItem(event) {
-  //TODO: data schema
-  //TODO: data with checked property
-  //TODO: render wrt checked property
+  // get li Element
   const liElement = getLIItem(event);
 
-  const checkBox = liElement.querySelector('.check');
+  // get the id of the item
+  const toDoID = parseInt(liElement.dataset.id);
 
-  const spanElement = liElement.querySelector('span');
+  // get the index of the item
+  const toDos = state.toDoLists[state.currentToDoListIndex].toDos;
+  const index = toDos.map((toDo) => toDo.itemId).indexOf(toDoID);
 
-  const classList = checkBox.classList;
+  //update data
+  toDos[index].isChecked = !toDos[index].isChecked;
 
-  if (
-    classList.contains('fa-square') &&
-    !classList.contains('fa-check-square')
-  ) {
-    classList.remove('fa-square');
-    classList.add('fa-check-square');
-  } else if (classList.contains('fa-check-square')) {
-    classList.remove('fa-check-square');
-    classList.add('fa-square');
-  }
+  console.log(toDos[index].isChecked);
 
+  //save data
+  saveDataSet();
+
+  // debugger;
+  // render list data
+  const listID = state.toDoLists[state.currentToDoListIndex].listId;
+  renderToDoList(listID.toString());
+
+  // sort list
   sortList();
 }
