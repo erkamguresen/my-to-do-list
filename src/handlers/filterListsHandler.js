@@ -4,7 +4,5 @@ export function filterListsHandler(event) {
   event.preventDefault();
   event.stopPropagation();
 
-  console.log(event);
-
   filterItems(event);
 }

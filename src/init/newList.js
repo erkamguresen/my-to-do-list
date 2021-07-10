@@ -3,7 +3,7 @@ import { state } from '../data/data.js';
 export function createNewList(nameOfTheList) {
   const newList = {
     listName: nameOfTheList,
-    listId: Date.now,
+    listId: Date.now(),
     toDos: [],
   };
 

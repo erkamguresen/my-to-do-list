@@ -1,4 +1,4 @@
-import { openTheListHandler } from '../../../handlers/openTheListHandler.js';
+import { listOfTheListHandler } from '../../../handlers/listOfTheListHandler.js';
 import { createSpanElement } from '../../shared/span.js';
 import { createDivElement } from '../../shared/divElement.js';
 import { createButtonElement } from '../../shared/buttonElement.js';
@@ -32,7 +32,7 @@ export function createListItemElement(list) {
   liElement.appendChild(buttonsDiv);
 
   // add listener
-  liElement.addEventListener('click', openTheListHandler);
+  liElement.addEventListener('click', listOfTheListHandler);
 
   return liElement;
 }
