@@ -30,4 +30,9 @@ export function renderTheListOfLists() {
 
     ulElement.appendChild(listItemElement);
   }
+
+  if (lists.length === 0) {
+    ulElement.innerHTML =
+      '<p class="text-center">There is no list to show.</p>';
+  }
 }

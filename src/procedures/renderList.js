@@ -30,6 +30,10 @@ export function renderToDoList(listID) {
     ulElement.appendChild(listItemElement);
   }
 
-  //sort the list
-  sortList();
+  if (list.toDos.length === 0) {
+    ulElement.innerHTML = '<p class="text-center">The list is empty.</p>';
+  } else {
+    //sort the list
+    sortList();
+  }
 }
