@@ -1,8 +1,12 @@
+import { createFormPanel } from '../components/shared/formPanel.js';
 import { state } from '../data/data.js';
+import {
+  addItemHandler,
+  filterItemsHandler,
+} from '../handlers/listItemsHandler.js';
+import { renderToDoList } from './renderList.js';
 
 export function opeTheList(listID) {
-  // TODO: open then list
-
   const mainPanel = document.getElementById('main-panel');
 
   // clear the container
@@ -17,6 +21,15 @@ export function opeTheList(listID) {
   header.innerText = state.toDoLists[index].listName;
 
   // append the form area
+  mainPanel.appendChild(createFormPanel('Add New Item'));
 
-  // render the list
+  // add listeners to the form
+  document.getElementById('addForm').addEventListener('submit', addItemHandler);
+
+  document
+    .getElementById('addItem')
+    .addEventListener('input', filterItemsHandler);
+
+  // TODO:  render the list
+  renderToDoList(listID);
 }

@@ -1,4 +1,4 @@
-import { currentData } from '../data/data.js';
+import { state } from '../data/data.js';
 import { createNewLIItem } from '../procedures/addItem.js';
 import { checkItem } from '../procedures/checkItem.js';
 import { deleteItem } from '../procedures/deleteItem.js';
@@ -30,20 +30,25 @@ export function listItemsHandler(event) {
 }
 
 export function addItemHandler(event) {
+  // TODO: write wrt new structure
   event.preventDefault();
-  //Get Input value
-  let newItem = document.getElementById('addItem');
+  event.stopPropagation();
 
-  //get text value
-  let newItemValue = newItem.value;
+  // //Get Input value
+  // let newItem = document.getElementById('addItem');
 
-  currentData.currentToDoList.push(newItemValue);
+  // //get text value
+  // let newItemValue = newItem.value;
 
-  renderToDoList();
+  // state.currentToDoList.push(newItemValue);
+
+  // renderToDoList();
 }
 
 export function filterItemsHandler(event) {
+  // TODO: write wrt new structure
   event.preventDefault();
+  event.stopPropagation();
 
-  filterItems(event);
+  // filterItems(event);
 }

@@ -1,6 +1,6 @@
 import { createDivElement } from './divElement.js';
 
-export function createFormPanel() {
+export function createFormPanel(buttonValue = 'Add New List') {
   const newDiv = createDivElement('mx-auto my-3');
   newDiv.id = 'form-container';
 
@@ -23,7 +23,7 @@ export function createFormPanel() {
   const submitButton = document.createElement('input');
   submitButton.type = 'submit';
   submitButton.className = 'btn btn-primary';
-  submitButton.value = 'Add New List';
+  submitButton.value = buttonValue;
 
   newForm.appendChild(submitButton);
 
