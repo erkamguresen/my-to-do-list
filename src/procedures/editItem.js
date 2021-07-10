@@ -34,16 +34,16 @@ export function disableEditing(event) {
   const toDos = state.toDoLists[state.currentToDoListIndex].toDos;
   const index = toDos.map((toDo) => toDo.itemId).indexOf(toDoID);
 
-  //update data
+  // update the data
   toDos[index].itemName = targetElement.innerText;
 
-  //save data
+  // save the data
   saveDataSet();
 
   // render list data
   const listID = state.toDoLists[state.currentToDoListIndex].listId;
   renderToDoList(listID.toString());
 
-  // sort list
+  // sort the list
   sortList();
 }

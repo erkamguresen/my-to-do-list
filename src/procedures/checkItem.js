@@ -15,19 +15,16 @@ export function checkItem(event) {
   const toDos = state.toDoLists[state.currentToDoListIndex].toDos;
   const index = toDos.map((toDo) => toDo.itemId).indexOf(toDoID);
 
-  //update data
+  //update the data
   toDos[index].isChecked = !toDos[index].isChecked;
 
-  console.log(toDos[index].isChecked);
-
-  //save data
+  //save the data
   saveDataSet();
 
-  // debugger;
-  // render list data
+  // render the list data
   const listID = state.toDoLists[state.currentToDoListIndex].listId;
   renderToDoList(listID.toString());
 
-  // sort list
+  // sort the list
   sortList();
 }
