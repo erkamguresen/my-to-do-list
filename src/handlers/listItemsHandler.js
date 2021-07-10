@@ -3,6 +3,7 @@ import { saveDataSet } from '../IO/IO-LocalStorage.js';
 import { checkItem } from '../procedures/checkItem.js';
 import { deleteItem } from '../procedures/deleteItem.js';
 import { editItem } from '../procedures/editItem.js';
+import { filterItems } from '../procedures/filterList.js';
 import { renderToDoList } from '../procedures/renderList.js';
 
 export function listItemsHandler(event) {
@@ -34,6 +35,9 @@ export function addItemHandler(event) {
   //get new input value
   const newItemName = document.getElementById('addItem').value;
 
+  // clear the input area
+  document.getElementById('addItem').value = '';
+
   const newToDo = {
     itemId: Date.now(),
     itemName: newItemName,
@@ -43,8 +47,6 @@ export function addItemHandler(event) {
   const currentList = state.toDoLists[state.currentToDoListIndex];
 
   currentList.toDos.push(newToDo);
-  console.log(currentList);
-  // state.currentToDoList.push(newItemValue);
 
   //save the state
   saveDataSet();
@@ -54,9 +56,8 @@ export function addItemHandler(event) {
 }
 
 export function filterItemsHandler(event) {
-  // TODO: write wrt new structure
   event.preventDefault();
   event.stopPropagation();
 
-  // filterItems(event);
+  filterItems(event);
 }
