@@ -1,6 +1,7 @@
 import { createLiItem } from '../components/Pages/toDoList/listItem.js';
 import { createDivElement } from '../components/shared/divElement.js';
 import { state } from '../data/data.js';
+import { sortList } from './sortList.js';
 
 export function renderToDoList(listID) {
   const mainPanel = document.getElementById('main-panel');
@@ -9,8 +10,6 @@ export function renderToDoList(listID) {
   const index = state.toDoLists.map((e) => e.listId).indexOf(parseInt(listID));
 
   const list = state.toDoLists[index];
-
-  console.log(list);
 
   // create  new list container
   const listContainer = createDivElement('', 'list-container');
@@ -30,4 +29,7 @@ export function renderToDoList(listID) {
 
     ulElement.appendChild(listItemElement);
   }
+
+  //sort the list
+  sortList();
 }
