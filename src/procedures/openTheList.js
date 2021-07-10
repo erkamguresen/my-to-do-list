@@ -16,6 +16,9 @@ export function opeTheList(listID) {
 
   const index = state.toDoLists.map((e) => e.listId).indexOf(parseInt(listID));
 
+  // update the list index in state
+  state.currentToDoListIndex = index;
+
   // change the header to show the list name
   const header = document.getElementById('header-title');
   header.innerText = state.toDoLists[index].listName;
@@ -32,4 +35,6 @@ export function opeTheList(listID) {
 
   // render the list
   renderToDoList(listID);
+
+  // TODO: add listeners to the list
 }

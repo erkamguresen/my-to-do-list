@@ -1,11 +1,9 @@
 import { state } from '../data/data.js';
-import { createNewLIItem } from '../procedures/addItem.js';
+import { saveDataSet } from '../IO/IO-LocalStorage.js';
 import { checkItem } from '../procedures/checkItem.js';
 import { deleteItem } from '../procedures/deleteItem.js';
 import { editItem } from '../procedures/editItem.js';
-import { filterItems } from '../procedures/filterList.js';
 import { renderToDoList } from '../procedures/renderList.js';
-import { sortList } from '../procedures/sortList.js';
 
 export function listItemsHandler(event) {
   event.preventDefault();
@@ -30,19 +28,29 @@ export function listItemsHandler(event) {
 }
 
 export function addItemHandler(event) {
-  // TODO: write wrt new structure
   event.preventDefault();
   event.stopPropagation();
 
-  // //Get Input value
-  // let newItem = document.getElementById('addItem');
+  //get new input value
+  const newItemName = document.getElementById('addItem').value;
 
-  // //get text value
-  // let newItemValue = newItem.value;
+  const newToDo = {
+    itemId: Date.now(),
+    itemName: newItemName,
+    isChecked: false,
+  };
 
+  const currentList = state.toDoLists[state.currentToDoListIndex];
+
+  currentList.toDos.push(newToDo);
+  console.log(currentList);
   // state.currentToDoList.push(newItemValue);
 
-  // renderToDoList();
+  //save the state
+  saveDataSet();
+
+  // render the list
+  renderToDoList(currentList.listId);
 }
 
 export function filterItemsHandler(event) {

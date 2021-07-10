@@ -8,6 +8,9 @@ export function renderTheListOfLists() {
 
   const lists = state.toDoLists;
 
+  // update the list index in state
+  state.currentToDoListIndex = -1;
+
   // delete existing list container
   if (listContainer !== null) {
     mainPanel.removeChild(listContainer);

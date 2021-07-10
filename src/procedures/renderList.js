@@ -11,8 +11,16 @@ export function renderToDoList(listID) {
 
   const list = state.toDoLists[index];
 
-  // create  new list container
-  const listContainer = createDivElement('', 'list-container');
+  // get the list container
+  let listContainer = document.getElementById('list-container');
+
+  // delete existing list container
+  if (listContainer !== null) {
+    mainPanel.removeChild(listContainer);
+  }
+
+  // create new list container
+  listContainer = createDivElement('', 'list-container');
   mainPanel.appendChild(listContainer);
 
   // create an ul element
