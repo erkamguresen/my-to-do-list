@@ -46,6 +46,9 @@
     </main>
     <footer></footer>
 
+    <!-- Bootstrap 5 Modal 
+    https://getbootstrap.com/docs/5.0/components/modal/ -->
+
     <!-- Button trigger modal -->
     <!-- <button
       type="button"
@@ -66,10 +69,10 @@
       aria-labelledby="staticBackdropLabel"
       aria-hidden="true"
     >
-      <div class="modal-dialog">
+      <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+            <h5 class="modal-title" id="staticBackdropLabel">Confirm Delete</h5>
             <button
               type="button"
               class="btn-close"
@@ -79,7 +82,9 @@
               X
             </button>
           </div>
-          <div class="modal-body">...</div>
+          <div class="modal-body">
+            <p>Are you sure you want to delete ?</p>
+          </div>
           <div class="modal-footer">
             <button
               type="button"
@@ -88,7 +93,9 @@
             >
               Close
             </button>
-            <button type="button" class="btn btn-primary">Understood</button>
+            <button type="button" class="btn btn-primary">
+              Yes, I am sure
+            </button>
           </div>
         </div>
       </div>

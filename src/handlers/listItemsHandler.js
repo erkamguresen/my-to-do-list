@@ -35,24 +35,26 @@ export function addItemHandler(event) {
   //get new input value
   const newItemName = document.getElementById('addItem').value;
 
-  // clear the input area
-  document.getElementById('addItem').value = '';
+  if (newItemName !== '') {
+    // clear the input area
+    document.getElementById('addItem').value = '';
 
-  const newToDo = {
-    itemId: Date.now(),
-    itemName: newItemName,
-    isChecked: false,
-  };
+    const newToDo = {
+      itemId: Date.now(),
+      itemName: newItemName,
+      isChecked: false,
+    };
 
-  const currentList = state.toDoLists[state.currentToDoListIndex];
+    const currentList = state.toDoLists[state.currentToDoListIndex];
 
-  currentList.toDos.push(newToDo);
+    currentList.toDos.push(newToDo);
 
-  //save the state
-  saveDataSet();
+    //save the state
+    saveDataSet();
 
-  // render the list
-  renderToDoList(currentList.listId);
+    // render the list
+    renderToDoList(currentList.listId);
+  }
 }
 
 export function filterItemsHandler(event) {

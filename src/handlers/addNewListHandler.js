@@ -9,15 +9,17 @@ export function addNewListHandler(event) {
   // get input value from the form
   const newListName = document.getElementById('addItem').value;
 
-  // clear the input area
-  document.getElementById('addItem').value = '';
+  if (newListName !== '') {
+    // clear the input area
+    document.getElementById('addItem').value = '';
 
-  // create the new list
-  createNewList(newListName);
+    // create the new list
+    createNewList(newListName);
 
-  //save the state
-  saveDataSet();
+    //save the state
+    saveDataSet();
 
-  //render list
-  renderTheListOfLists();
+    //render list
+    renderTheListOfLists();
+  }
 }

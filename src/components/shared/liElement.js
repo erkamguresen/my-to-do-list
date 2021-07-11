@@ -29,6 +29,9 @@ export function createLiElement(textForListItem) {
     '',
     createDeleteIcon()
   );
+  deleteButton.setAttribute('data-bs-toggle', 'modal');
+  deleteButton.setAttribute('data-bs-target', '#staticBackdrop');
+
   buttonsDiv.appendChild(deleteButton);
 
   newLi.appendChild(buttonsDiv);
