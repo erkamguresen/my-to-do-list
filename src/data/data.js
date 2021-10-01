@@ -6,80 +6,73 @@
  * named MyToDoListDataSet
  */
 const toDoListData = {
-  toDoLists: [],
+  toDoLists: exampleListData,
   currentToDoListIndex: -1,
 };
 
-const toDoListExampleData = {
-  toDoLists: [
+const exampleListData = [
+  [
     // list 1
     {
-      listName: 'Must To Do List',
+      listName: 'Shopping List (example)',
       listId: 1625764536952,
       toDos: [
         // list item 1
         {
           itemId: 1625764684884,
-          itemName: 'First thing to do',
+          itemName: 'Milk',
           isChecked: false,
         },
         {
           itemId: 1625764684894,
-          itemName: 'Second thing to do',
+          itemName: 'Eggs x12',
           isChecked: true,
         },
         {
           itemId: 1625764684895,
-          itemName: 'Third thing to do',
+          itemName: 'Appels',
           isChecked: false,
         },
       ],
     },
     // list 2
     {
-      listName: 'a single to do list',
+      listName: 'Daily List (example)',
       listId: 1625764551531,
       toDos: [
         {
           itemId: 1625764684184,
-          itemName: 'List Item 1',
+          itemName: 'Watch the online tutorial',
           isChecked: true,
         },
         {
           itemId: 1625764684294,
-          itemName: 'List Item 2',
+          itemName: 'Finish the project',
           isChecked: true,
         },
         {
           itemId: 1625764684395,
-          itemName: 'List Item 3',
+          itemName: 'New episode of my favorite series',
+          isChecked: false,
+        },
+        {
+          itemId: 1625764684396,
+          itemName: 'New episode of my favorite series',
           isChecked: false,
         },
       ],
     },
 
     {
-      listName: 'My shopping List',
+      listName: 'An new empty List (example)',
       listId: 1625764551533,
-      toDos: [
-        {
-          itemId: 1625764684584,
-          itemName: 'Not Checked Item 1',
-          isChecked: false,
-        },
-        {
-          itemId: 1625764684694,
-          itemName: 'Not Checked Item 2',
-          isChecked: false,
-        },
-        {
-          itemId: 1625764684795,
-          itemName: 'Not Checked Item 3',
-          isChecked: false,
-        },
-      ],
+      toDos: [],
     },
   ],
+];
+
+const toDoListExampleData = {
+  toDoLists: exampleListData,
 };
 
 export { toDoListData as state, toDoListExampleData as exampleData };
