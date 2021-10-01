@@ -10,8 +10,8 @@ const toDoListData = {
   currentToDoListIndex: -1,
 };
 
-const exampleListData = [
-  [
+const toDoListExampleData = {
+  toDoLists: [
     // list 1
     {
       listName: 'Shopping List (example)',
@@ -69,10 +69,6 @@ const exampleListData = [
       toDos: [],
     },
   ],
-];
-
-const toDoListExampleData = {
-  toDoLists: exampleListData,
 };
 
 export { toDoListData as state, toDoListExampleData as exampleData };

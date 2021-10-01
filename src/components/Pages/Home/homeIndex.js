@@ -11,6 +11,8 @@ if (getDataSet() !== null) {
   state.toDoLists = getDataSet().toDoLists;
 }
 
+console.log(state);
+
 // the add and search form part
 const mainPanel = document.getElementById('main-panel');
 mainPanel.appendChild(createFormPanel());
